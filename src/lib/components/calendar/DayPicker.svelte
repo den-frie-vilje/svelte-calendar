@@ -17,7 +17,7 @@
 		.fill(0)
 		.map((d, i) =>
 			dayjs()
-				.day(($store.startOfWeekIndex + i) % 7)
+				.day((parseInt($store.startOfWeekIndex) + i) % 7)
 				.format('ddd')
 		);
 
