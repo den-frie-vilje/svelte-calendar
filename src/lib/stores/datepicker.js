@@ -113,7 +113,7 @@ const get = ({ selected, start, end, startOfWeekIndex = 0, shouldEnlargeDay = fa
 				last = { date, outsider: false };
 			}
 
-			while (days[0].date.getDay() !== startOfWeekIndex) {
+			while (days[0].date.getDay() !== parseInt(startOfWeekIndex)) {
 				const date = new Date(days[0].date);
 				date.setDate(days[0].date.getDate() - 1);
 				days.unshift({
